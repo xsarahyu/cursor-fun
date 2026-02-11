@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display-row">
+      <span class="angle-mode" id="angleMode">DEG</span>
+      <input type="text" class="display" id="display" readonly value="0">
+    </div>
+    <div class="buttons">
+      <button class="btn scientific" data-action="unary" data-fn="sin">sin</button>
+      <button class="btn scientific" data-action="unary" data-fn="cos">cos</button>
+      <button class="btn scientific" data-action="unary" data-fn="tan">tan</button>
+      <button class="btn scientific" data-action="constant" data-value="pi">π</button>
+      <button class="btn clear" data-action="clear">C</button>
+      <button class="btn scientific" data-action="unary" data-fn="asin">asin</button>
+      <button class="btn scientific" data-action="unary" data-fn="acos">acos</button>
+      <button class="btn scientific" data-action="unary" data-fn="atan">atan</button>
+      <button class="btn scientific" data-action="constant" data-value="e">e</button>
+      <button class="btn operator" data-action="operator" data-value="/">÷</button>
+      <button class="btn scientific" data-action="unary" data-fn="log">log</button>
+      <button class="btn scientific" data-action="unary" data-fn="ln">ln</button>
+      <button class="btn scientific" data-action="unary" data-fn="sqrt">√</button>
+      <button class="btn scientific" data-action="unary" data-fn="square">x²</button>
+      <button class="btn operator" data-action="operator" data-value="*">×</button>
+      <button class="btn scientific" data-action="operator" data-value="^">x^y</button>
+      <button class="btn scientific" data-action="unary" data-fn="reciprocal">1/x</button>
+      <button class="btn scientific" data-action="unary" data-fn="negate">±</button>
+      <button class="btn mode" data-action="toggleAngle" id="angleBtn">DEG</button>
+      <button class="btn operator" data-action="operator" data-value="-">−</button>
+      <div class="numpad">
+        <button class="btn number" data-value="7">7</button>
+        <button class="btn number" data-value="8">8</button>
+        <button class="btn number" data-value="9">9</button>
+        <button class="btn number" data-value="4">4</button>
+        <button class="btn number" data-value="5">5</button>
+        <button class="btn number" data-value="6">6</button>
+        <button class="btn number" data-value="1">1</button>
+        <button class="btn number" data-value="2">2</button>
+        <button class="btn number" data-value="3">3</button>
+      </div>
+      <button class="btn operator" data-action="operator" data-value="+">+</button>
+      <button class="btn equals" data-action="equals">=</button>
+      <button class="btn number zero" data-value="0">0</button>
+      <button class="btn decimal" data-value=".">.</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+  font-family: "SF Mono", "Consolas", monospace;
+}
+
+.calculator {
+  background: #0f0f1a;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.display-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.angle-mode {
+  font-size: 11px;
+  color: #6b7280;
+  min-width: 28px;
+}
+
+.display {
+  flex: 1;
+  height: 56px;
+  padding: 0 14px;
+  font-size: 24px;
+  text-align: right;
+  border: none;
+  border-radius: 8px;
+  background: #1a1a2e;
+  color: #e8e8e8;
+  letter-spacing: 1px;
+}
+
+.display:focus {
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.numpad {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.btn {
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.15s;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn.number,
+.btn.decimal {
+  background: #252540;
+  color: #e8e8e8;
+}
+
+.btn.number:hover,
+.btn.decimal:hover {
+  background: #2d2d4a;
+}
+
+.btn.operator {
+  background: #3d3d5c;
+  color: #a78bfa;
+}
+
+.btn.operator:hover {
+  background: #4a4a6e;
+}
+
+.btn.scientific {
+  background: #2a2a45;
+  color: #93c5fd;
+  font-size: 13px;
+}
+
+.btn.scientific:hover {
+  background: #353555;
+}
+
+.btn.clear {
+  background: #4a3d5c;
+  color: #c4b5fd;
+}
+
+.btn.clear:hover {
+  background: #5a4d6c;
+}
+
+.btn.mode {
+  background: #1e3a5f;
+  color: #93c5fd;
+  font-size: 11px;
+}
+
+.btn.mode:hover {
+  background: #2a4a6f;
+}
+
+.btn.equals {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  color: white;
+  grid-row: span 2;
+  font-size: 20px;
+  grid-column: 5;
+}
+
+.btn.zero {
+  grid-column: span 2;
+}
+
+.btn.decimal {
+  grid-column: 3;
+}
+
+.btn.equals:hover {
+  filter: brightness(1.15);
+}
